@@ -16,4 +16,4 @@ class Pessoa(models.Model):
 
     # Função para retornar o numero do documento no django admin
     def __str__(self):
-        return self.first_name + ' ' + self.last_name
+        return self.nome + ' ' + self.sobrenome
