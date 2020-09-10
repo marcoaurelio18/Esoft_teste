@@ -19,23 +19,29 @@ def personList(request):
 
     return render(request, 'core/person_list.html', {'pessoas': pessoas})
 
+
 # So pode ser acessado com login
 @login_required
 def newPerson(request):
     form = PersonForm(request.POST or None, request.FILES or None)
+    # Abrir api
     api = requests.get('https://gerador-nomes.herokuapp.com/nome/aleatorio')
+    # Codificar para utf-8
     api.encoding = 'utf-8'
     r = json.loads(api.text)
+    # Colocar os valores do nome e sobrenome
     nome = r[0]
     sobrenome = r[1] + ' ' + r[2]
     form.initial['nome'] = nome
     form.initial['sobrenome'] = sobrenome
+
     if form.is_valid():
         pessoa = form.save(commit=False)
         form.save()
         # Quando salvar, retorna para a lista de pessoas
         return redirect('personList')
     return render(request, 'core/person_form.html', {'form': form})
+
 
 # So pode ser acessado com login
 @login_required
@@ -49,6 +55,7 @@ def personUpdate(request, id):
         return redirect('personList')
 
     return render(request, 'core/person_form.html', {'form': form})
+
 
 # So pode ser acessado com login
 @login_required
