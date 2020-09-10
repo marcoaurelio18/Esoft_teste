@@ -24,7 +24,7 @@ def personList(request):
 def newPerson(request):
     form = PersonForm(request.POST or None, request.FILES or None)
     api = requests.get('https://gerador-nomes.herokuapp.com/nome/aleatorio')
-    #open(api, encoding='utf-8')
+    api.encoding = 'utf-8'
     r = json.loads(api.text)
     nome = r[0]
     sobrenome = r[1] + ' ' + r[2]
