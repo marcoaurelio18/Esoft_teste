@@ -1,7 +1,7 @@
 # Esoft_teste
 
 Aplicação de teste. Para rodar, basta utilizar os comandos:  
-1. pip install requirements.txt  
+1. pip install -r requirements.txt  
 2. python manage.py createsuperuser  
 3. python manage.py runserver  
 
