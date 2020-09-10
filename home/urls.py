@@ -5,5 +5,5 @@ from core import urls as core_urls
 urlpatterns = [
     path('', home, name='home'),
     path('logout/', my_logout, name="logout"),
-    path('core', include(core_urls))
+    path('core/', include(core_urls))
 ]
