@@ -1,0 +1,164 @@
+@font-face{
+    font-family: font1;
+    src: url(../font/Montserrat-Regular.otf)
+}
+
+@font-face{
+    font-family: font2;
+    src: url(../font/IndieFlower-Regular.ttf)
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.header{
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: #49274A;
+}
+
+.inner_header{
+    width: 1000px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo_container{
+    height: 100%;
+    display: table;
+    float: left;
+}
+
+.logo_container h1{
+    color: white;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: font1;
+    font-size: 32px;
+    font-weight: 200;
+}
+
+.logo_container h1 span{
+    font-weight: 800;
+}
+
+.navegation{
+    float: right;
+    height: 100%;
+}
+
+.navegation a{
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+}
+
+.navegation:last-child{
+    padding: 0;
+}
+
+.navegation a li{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: white;
+    font-family: font1;
+    font-size: 16px;
+}
+
+.home{
+    color: #94618E;
+    text-align: center;
+    font-family: Georgia;
+    font-weight: 600;
+}
+.redirect {
+  border-radius: 5px;
+  background-color: #94618E;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 0px;
+}
+
+.redirect span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.redirect span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.redirect:hover span {
+  padding-right: 25px;
+}
+
+.redirect:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.name{
+    font-family: font2;
+    font-size: 32px;
+}
+
+.extra{
+    height: 100%
+    margin: 100px;
+    padding: 200px;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+    border-color: #49274A;
+    background-color: #49274A
+}
+
+.btn-primary {
+    border-color: #94618E
+    background-color: #94618E
+}
+
+.btn-outline-primary,
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+    color: #94618E;
+    border-color: #94618E;
+}
+
+.btn-outline-primary:hover{
+    color: white;
+    border-color: #94618E;
+    background-color: #94618E;
+}
+
+.jumbotron{
+    background-color: #F8EEE7;
+}
+
+.document{
+    padding: 1px 2px;
+}

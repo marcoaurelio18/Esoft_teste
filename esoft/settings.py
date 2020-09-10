@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    'bootstrapform'
+    'home',
+    'bootstrapform',
 ]
 
 MIDDLEWARE = [
@@ -122,7 +123,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    'esoft/static/'
+    BASE_DIR / "static",
+    '/var/www/static/',
 ]
 
 LOGIN_URL = '/login/'

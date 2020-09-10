@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Sistema de gestão {% endblock %}
+
+{% block main %}
+
+    <div class="row">
+        <div class="col-12">
+            <h1 class="home">SEJA BEM VINDO</h1>
+        </div>
+
+        <div class="col-sm">
+            {% if user.is_authenticated %}
+                <p class="name">Olá, {{ user.username }}</p>
+                <a class="redirect" href="{% url 'personList' %}"><span>ir para o sistema</span></a><br><br>
+                <a class="btn btn-outline-primary" href="{% url 'logout' %}">Sair</a><br>
+                <a class="btn btn-outline-primary" href="{% url 'password_change' %}">Alterar senha</a>
+
+            {% else %}
+                <a href="{% url 'login' %}" class="btn btn-outline-primary">Entrar</a>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock %}

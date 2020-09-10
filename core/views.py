@@ -56,6 +56,6 @@ def personDelete(request, id):
 
     if request.method == 'POST':
         pessoa.delete()
-        return redirect('person_list')
+        return redirect('personList')
 
     return render(request, 'core/person_delete_confirm.html', {'pessoa': pessoa})
