@@ -118,9 +118,14 @@
   opacity: 1;
   right: 0;
 }
+
 .name{
     font-family: font2;
     font-size: 32px;
+}
+
+.empty {
+    color: #F4DECB;
 }
 
 .extra{
