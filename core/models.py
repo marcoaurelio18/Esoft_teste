@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import F
 
 
 class Pessoa(models.Model):
@@ -17,3 +18,6 @@ class Pessoa(models.Model):
     # Função para retornar o numero do documento no django admin
     def __str__(self):
         return self.nome + ' ' + self.sobrenome
+
+    class Meta:
+        ordering = [F('nome').asc(nulls_last=True)]
